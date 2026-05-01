@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zivra Control Room</title>
+    <link rel="icon" href="icon.svg?v=20260325-command-center-v2" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20260325-command-center-v2" type="text/css">
+  </head>
+  <body>
+    <div class="orb orb-left"></div>
+    <div class="orb orb-right"></div>
+
+    <main class="shell">
+      <aside class="command-rail panel">
+        <div class="rail-brand">
+          <div class="rail-brand-mark">Z</div>
+          <div class="rail-brand-copy">
+            <p class="eyebrow">Zivra command center</p>
+            <strong>AI control layer</strong>
+            <span>Calm execution, visible trust, futuristic supervision.</span>
+          </div>
+        </div>
+
+        <nav class="rail-nav" aria-label="Primary">
+          <a class="rail-item is-active" href="#dashboard-overview">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 11.5 12 5l8 6.5"></path>
+                <path d="M6.5 10.5V19h11v-8.5"></path>
+              </svg>
+            </span>
+            <span>Dashboard</span>
+          </a>
+          <a class="rail-item" href="#assistant-console">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4.5" y="5" width="15" height="14" rx="3"></rect>
+                <path d="M8 10h8M8 14h5"></path>
+              </svg>
+            </span>
+            <span>Tasks</span>
+          </a>
+          <a class="rail-item" href="#workflow-section">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="7" r="2"></circle>
+                <circle cx="18" cy="7" r="2"></circle>
+                <circle cx="12" cy="17" r="2"></circle>
+                <path d="M8 8.5 10.6 14M16 8.5 13.4 14"></path>
+              </svg>
+            </span>
+            <span>Workflows</span>
+          </a>
+          <a class="rail-item" href="#logs-section">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 4.5h9l3 3V19a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 5 19V6A1.5 1.5 0 0 1 6.5 4.5Z"></path>
+                <path d="M14.5 4.5V8h3.5"></path>
+                <path d="M8 11h8M8 14.5h8"></path>
+              </svg>
+            </span>
+            <span>Logs</span>
+          </a>
+          <a class="rail-item" href="#ai-core-section">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="7" y="7" width="10" height="10" rx="2"></rect>
+                <path d="M12 3.5V7M12 17v3.5M3.5 12H7M17 12h3.5M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"></path>
+              </svg>
+            </span>
+            <span>AI Core</span>
+          </a>
+          <a class="rail-item" href="#memory-section">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 7.5A2.5 2.5 0 0 1 9.5 5h8A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-8A2.5 2.5 0 0 1 7 16.5Z"></path>
+                <path d="M7 7.5v9A2.5 2.5 0 0 1 4.5 19h-.5v-14h.5A2.5 2.5 0 0 1 7 7.5Z"></path>
+                <path d="M11 9.5h5M11 13h5"></path>
+              </svg>
+            </span>
+            <span>Memory</span>
+          </a>
+          <a class="rail-item" href="#settings-section">
+            <span class="rail-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3.2"></circle>
+                <path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.5-2.4.8a7.2 7.2 0 0 0-1.8-1L14.5 3h-5L9.3 5.8a7.2 7.2 0 0 0-1.8 1L5 6l-2 3.5L5 11a7 7 0 0 0 0 2l-2 1.5L5 18l2.5-.8a7.2 7.2 0 0 0 1.8 1l.2 2.8h5l.2-2.8a7.2 7.2 0 0 0 1.8-1L19 18l2-3.5-2.1-1.5c.1-.3.1-.7.1-1Z"></path>
+              </svg>
+            </span>
+            <span>Settings</span>
+          </a>
+        </nav>
+
+        <div class="rail-note">
+          <strong>This AI operates.</strong>
+          <span>Every action stays visible, reviewable, and approval-gated.</span>
+        </div>
+      </aside>
+
+      <div class="console-main">
+        <header class="workspace-topbar panel">
+          <div class="workspace-title">
+            <p class="eyebrow">AI Command Center</p>
+            <strong>Zivra control layer over your digital life</strong>
+          </div>
+          <nav class="workspace-modes" aria-label="Workspace modes">
+            <a class="workspace-mode is-active" href="#dashboard-overview">Dashboard</a>
+            <a class="workspace-mode" href="#assistant-console">Assistant</a>
+            <a class="workspace-mode" href="#tasks-section">Task Execution</a>
+            <a class="workspace-mode" href="#research-panel">Research Mode</a>
+            <a class="workspace-mode" href="#workflow-section">Automation Builder</a>
+          </nav>
+          <button id="open-command-palette" class="command-launcher" type="button">
+            <span>Command Palette</span>
+            <kbd>Ctrl + K</kbd>
+          </button>
+          <div class="workspace-presence">
+            <span class="presence-avatar">Z</span>
+            <div>
+              <strong>System online</strong>
+              <span>Control, execution, audit</span>
+            </div>
+          </div>
+        </header>
+        <section id="dashboard-overview" class="hero panel">
+          <div class="hero-scene" aria-hidden="true">
+            <div class="scene-arm scene-arm-left"></div>
+            <div class="scene-arm scene-arm-right"></div>
+            <div class="scene-core"></div>
+            <div class="hero-figure"></div>
+          </div>
+
+          <div class="hero-glass">
+            <div class="hero-copy">
+              <div class="hero-copy-intro">
+                <p class="eyebrow">AI Command Center</p>
+                <h1 class="hero-title">Welcome Back.</h1>
+                <p class="hero-subtitle">Task Automation &middot; Data Analysis &middot; Code Tools</p>
+                <p class="lede">
+                  Zivra is your calm control layer for supervision, approvals, automation, and high-trust execution across
+                  your digital workspace.
+                </p>
+              </div>
+              <p class="eyebrow">Luxury AI control console</p>
+              <h1>Welcome Back!</h1>
+              <p class="hero-subtitle">Task Automation · Data Analysis · Code Tools</p>
+              <p class="lede">
+                Build, supervise, and review intelligent work inside a calm control surface that favors trust, clarity,
+                and measured automation over noise.
+              </p>
+              <p class="hero-identity">AI Core: <span id="assistant-name-heading">Zivra</span></p>
+            </div>
+
+            <div class="hero-status-strip" aria-label="System status">
+              <span class="status-pill">System idle</span>
+              <span class="status-copy">Ready to assist, operate, and wait for approval when needed.</span>
+            </div>
+
+            <div class="hero-actions">
+              <button id="safe-mode-toggle" class="primary-button" type="button">Enable safe mode</button>
+              <a class="ghost-button" href="/mobile">Mobile companion</a>
+              <span id="connection-status" class="connection-pill">Checking backend</span>
+            </div>
+
+            <div class="feature-grid" aria-label="Featured capabilities">
+              <article class="feature-card">
+                <span class="feature-icon feature-icon-task" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="6" y="4.5" width="12" height="15" rx="2.5"></rect>
+                    <path d="M9 8.5h6M9 12h6M9 15.5h3.5"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Task Automation</strong>
+                  <span>Schedule &amp; execute</span>
+                </div>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-icon feature-icon-data" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 18.5h14"></path>
+                    <path d="M8 16V10M12 16V6.5M16 16v-4.5"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Data Analysis</strong>
+                  <span>Insights &amp; metrics</span>
+                </div>
+              </article>
+
+              <article class="feature-card">
+                <span class="feature-icon feature-icon-code" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4.5" y="6" width="15" height="12" rx="2.5"></rect>
+                    <path d="m10 10-2.5 2 2.5 2M14 10l2.5 2-2.5 2"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Code Tools</strong>
+                  <span>Deploy scripts</span>
+                </div>
+              </article>
+            </div>
+
+            <div class="hero-command-row">
+              <a class="primary-button hero-command" href="#assistant-console">Run Task</a>
+              <a class="ghost-button hero-command hero-command-secondary" href="#research-panel">Generate Report</a>
+            </div>
+
+            <div class="hero-metrics">
+              <article class="metric-card">
+                <span class="stat-label">Pending approvals</span>
+                <strong id="metric-pending">0</strong>
+              </article>
+              <article class="metric-card">
+                <span class="stat-label">Pending reminders</span>
+                <strong id="metric-reminders">0</strong>
+              </article>
+              <article class="metric-card">
+                <span class="stat-label">Runtime mode</span>
+                <strong id="metric-mode">Local first</strong>
+              </article>
+              <article class="metric-card">
+                <span class="stat-label">Approved roots</span>
+                <strong id="metric-roots">Notes and docs</strong>
+              </article>
+              <article class="metric-card">
+                <span class="stat-label">Memory</span>
+                <strong id="metric-memory">Enabled</strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="workspace">
+        <article id="assistant-console" class="panel console-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Assistant</p>
+              <h2>Conversation console</h2>
+            </div>
+            <span class="panel-chip">Policy gated</span>
+          </div>
+
+          <div id="chat-thread" class="chat-thread"></div>
+
+          <div id="quick-prompts" class="prompt-row"></div>
+
+          <form id="assistant-form" class="composer">
+            <label id="assistant-input-label" class="sr-only" for="assistant-input">Message Zivra</label>
+            <textarea
+              id="assistant-input"
+              name="message"
+              rows="3"
+              placeholder="Ask for system info, clipboard reads or writes, webpage reading or summaries, research briefs, YouTube or SEO ideas, document reading, summaries, structure inspection, filtered document views, path-focused schema drills, or nested schema depth checks, a web search, an approved app or workspace, a note, a one-off or recurring reminder, a local email draft or send request, or a WhatsApp draft or handoff."
+            ></textarea>
+            <div class="composer-actions">
+              <div class="composer-status">
+                <span class="helper-copy">Safe reads run now. Side effects pause for approval.</span>
+                <span id="voice-status" class="voice-status">Voice controls checking browser support</span>
+              </div>
+              <div class="composer-tool-row">
+                <button id="voice-toggle" class="ghost-button" type="button">Start mic</button>
+                <button id="speak-latest-reply" class="ghost-button" type="button">Speak reply</button>
+                <button class="primary-button" type="submit">Send</button>
+              </div>
+            </div>
+          </form>
+        </article>
+
+        <aside class="sidebar">
+          <div class="context-panel-head">
+            <p class="eyebrow">Context Panel</p>
+            <h2>Live approvals, logs, and memory</h2>
+          </div>
+          <article id="tasks-section" class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Queue</p>
+                <h2>Pending approvals</h2>
+              </div>
+              <span id="pending-badge" class="panel-chip subtle-chip">0 waiting</span>
+            </div>
+            <div id="pending-list" class="stack-list"></div>
+          </article>
+
+          <article id="logs-section" class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Audit</p>
+                <h2>Recent activity</h2>
+              </div>
+              <span class="panel-chip subtle-chip">Replayable</span>
+            </div>
+            <div class="panel-actions">
+              <form id="activity-search-form" class="search-form">
+                <label class="sr-only" for="activity-search-input">Search recent activity</label>
+                <input
+                  id="activity-search-input"
+                  class="search-input"
+                  type="search"
+                  placeholder="Search activity by step, tool, flow, or error"
+                >
+                <label class="sr-only" for="activity-date-from">Filter activity from date</label>
+                <input
+                  id="activity-date-from"
+                  class="search-input activity-date-input"
+                  type="date"
+                >
+                <label class="sr-only" for="activity-date-to">Filter activity to date</label>
+                <input
+                  id="activity-date-to"
+                  class="search-input activity-date-input"
+                  type="date"
+                >
+                <button class="ghost-button" type="submit">Search</button>
+              </form>
+              <button id="save-activity-view" class="ghost-button" type="button">Save view</button>
+              <button id="copy-activity-export" class="ghost-button" type="button">Copy JSON</button>
+              <button id="download-activity-export" class="ghost-button" type="button">Download JSON</button>
+              <button id="clear-activity-search" class="ghost-button" type="button">Show recent</button>
+            </div>
+            <div id="activity-toolbar" class="activity-toolbar"></div>
+            <div id="activity-list" class="stack-list"></div>
+            <div class="activity-footer">
+              <button id="load-more-activity" class="ghost-button" type="button">Load more</button>
+            </div>
+          </article>
+
+          <article id="memory-section" class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Memory</p>
+                <h2>Context and recall</h2>
+              </div>
+              <span class="panel-chip subtle-chip">Editable</span>
+            </div>
+            <div id="memory-panel" class="stack-list compact-list"></div>
+          </article>
+        </aside>
+      </section>
+
+        <section class="lower-grid">
+        <article id="ai-core-section" class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Tools</p>
+              <h2>Registered capabilities</h2>
+            </div>
+          </div>
+          <div id="tool-list" class="stack-list"></div>
+        </article>
+
+        <article id="settings-section" class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Settings</p>
+              <h2>Local preferences</h2>
+            </div>
+          </div>
+          <div id="settings-panel" class="stack-list compact-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Clipboard</p>
+              <h2>Local clipboard</h2>
+            </div>
+          </div>
+          <div id="clipboard-panel" class="stack-list compact-list"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Companion</p>
+              <h2>Mobile access</h2>
+            </div>
+          </div>
+          <div id="companion-access-panel" class="stack-list compact-list"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Files</p>
+              <h2>Approved root explorer</h2>
+            </div>
+            <button id="refresh-files" class="ghost-button" type="button">Refresh files</button>
+          </div>
+          <div class="panel-actions">
+            <form id="files-search-form" class="search-form">
+              <label class="sr-only" for="files-search-input">Search approved files</label>
+              <input
+                id="files-search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search files by name, path, or supported text content"
+              >
+              <button class="ghost-button" type="submit">Search</button>
+            </form>
+            <button id="clear-files-search" class="ghost-button" type="button">Show folder</button>
+          </div>
+          <div id="files-status" class="stack-meta reminder-summary"></div>
+          <div id="files-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Web Reader</p>
+              <h2>Sanitized browser read</h2>
+            </div>
+          </div>
+          <div id="web-reader-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Vision</p>
+              <h2>Screenshot understanding</h2>
+            </div>
+          </div>
+          <div id="vision-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Research</p>
+              <h2>Local research brief</h2>
+            </div>
+          </div>
+          <div id="research-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Creator</p>
+              <h2>YouTube and SEO helper</h2>
+            </div>
+          </div>
+          <div id="content-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Outbox</p>
+              <h2>Approval-gated email</h2>
+            </div>
+            <button id="refresh-emails" class="ghost-button" type="button">Refresh outbox</button>
+          </div>
+          <div id="email-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Messaging</p>
+              <h2>WhatsApp handoff</h2>
+            </div>
+            <button id="refresh-messages" class="ghost-button" type="button">Refresh handoff queue</button>
+          </div>
+          <div id="messaging-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Reminders</p>
+              <h2>Upcoming follow-ups</h2>
+            </div>
+            <div class="panel-actions">
+              <button id="toggle-archived-reminders" class="ghost-button" type="button">Show archived</button>
+              <button id="archive-completed-reminders" class="ghost-button" type="button">Archive completed</button>
+              <button id="restore-archived-reminders" class="ghost-button" type="button">Restore archived</button>
+              <button id="purge-archived-reminders" class="ghost-button danger-button" type="button">Delete archived</button>
+              <button id="notification-toggle" class="ghost-button" type="button">Enable alerts</button>
+              <button id="refresh-reminders" class="ghost-button" type="button">Refresh reminders</button>
+            </div>
+          </div>
+          <div id="reminder-summary" class="stack-meta reminder-summary"></div>
+          <div id="reminders-list" class="stack-list reminder-list"></div>
+        </article>
+
+        <article id="workflow-section" class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Workflows</p>
+              <h2>Scheduled task queue</h2>
+            </div>
+            <button id="refresh-workflows" class="ghost-button" type="button">Refresh workflows</button>
+          </div>
+          <div id="workflow-panel" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Notes</p>
+              <h2>Approved workspace</h2>
+            </div>
+            <button id="refresh-notes" class="ghost-button" type="button">Refresh notes</button>
+          </div>
+          <div class="panel-actions">
+            <form id="notes-search-form" class="search-form">
+              <label class="sr-only" for="notes-search-input">Search notes</label>
+              <input
+                id="notes-search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search notes by title or content"
+              >
+              <button class="ghost-button" type="submit">Search</button>
+            </form>
+            <button id="clear-notes-search" class="ghost-button" type="button">Show recent</button>
+          </div>
+          <div id="notes-status" class="stack-meta reminder-summary"></div>
+          <div id="notes-list" class="stack-list note-list"></div>
+          <div id="note-reader" class="stack-list note-reader"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Documents</p>
+              <h2>Approved read-only roots</h2>
+            </div>
+            <button id="refresh-documents" class="ghost-button" type="button">Refresh documents</button>
+          </div>
+          <div class="panel-actions">
+            <form id="documents-search-form" class="search-form">
+              <label class="sr-only" for="documents-search-input">Search approved documents</label>
+              <input
+                id="documents-search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search docs and notes by title, path, or content"
+              >
+              <button class="ghost-button" type="submit">Search</button>
+            </form>
+            <button id="clear-documents-search" class="ghost-button" type="button">Show recent</button>
+          </div>
+          <div id="documents-status" class="stack-meta reminder-summary"></div>
+          <div id="documents-list" class="stack-list document-list"></div>
+          <div id="document-reader" class="stack-list document-reader"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Approvals</p>
+              <h2>Permission model</h2>
+            </div>
+          </div>
+          <div id="permission-list" class="stack-list compact-list"></div>
+        </article>
+
+        <article class="panel wide-panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Roadmap</p>
+              <h2>Build sequence</h2>
+            </div>
+          </div>
+          <div id="phase-list" class="phase-grid"></div>
+        </article>
+        </section>
+      </div>
+    </main>
+
+    <div id="command-palette" class="command-palette is-hidden" aria-hidden="true">
+      <div id="command-palette-backdrop" class="command-palette-backdrop"></div>
+      <section class="command-palette-panel" role="dialog" aria-modal="true" aria-labelledby="command-palette-title">
+        <header class="command-palette-head">
+          <div>
+            <p class="eyebrow">Quick control</p>
+            <h2 id="command-palette-title">What would you like to do?</h2>
+          </div>
+          <button id="close-command-palette" class="ghost-button" type="button">Close</button>
+        </header>
+        <label class="sr-only" for="command-palette-input">Search commands and screens</label>
+        <input
+          id="command-palette-input"
+          class="search-input command-palette-input"
+          type="search"
+          placeholder="Search commands, workflows, memory, research, or system actions"
+          autocomplete="off"
+        >
+        <div id="command-palette-summary" class="command-palette-summary"></div>
+        <div id="command-palette-results" class="command-palette-results"></div>
+      </section>
+    </div>
+
+    <script src="app.js?v=20260325-command-center-v2"></script>
+  </body>
+</html>

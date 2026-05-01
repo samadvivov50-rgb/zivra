@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#c7683b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Zivra Companion</title>
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./mobile.css">
+  </head>
+  <body>
+    <main class="mobile-shell">
+      <header class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Mobile companion</p>
+          <h1 id="assistant-name">Zivra</h1>
+          <p id="sync-status" class="lede">Connecting to the local sync feed...</p>
+        </div>
+        <div class="hero-actions">
+          <button id="refresh-companion" class="primary-button" type="button">Refresh</button>
+          <button id="install-companion" class="ghost-button" type="button" hidden>Install</button>
+          <a class="ghost-button" href="/ui/">Control room</a>
+        </div>
+        <div class="hero-meta">
+          <span id="connection-status" class="status-pill">Checking backend</span>
+          <span id="supervisor-status" class="meta-chip">Supervisor paused</span>
+        </div>
+      </header>
+
+      <section class="metric-grid" id="metric-grid"></section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Chat</p>
+            <h2>Assistant message</h2>
+          </div>
+        </div>
+        <form id="mobile-message-form" class="stack-form">
+          <textarea
+            id="mobile-message"
+            class="stack-textarea"
+            rows="4"
+            placeholder="Ask for a quick status check, queue a workflow, or stage a safe action."
+          ></textarea>
+          <div class="action-row">
+            <button class="primary-button" type="submit">Send</button>
+            <button id="clear-mobile-message" class="ghost-button" type="button">Clear</button>
+          </div>
+        </form>
+        <div id="assistant-reply" class="response-card"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Thread</p>
+            <h2>Current session</h2>
+          </div>
+          <a id="control-room-link" class="ghost-button" href="/ui/">Open in control room</a>
+        </div>
+        <div id="session-history" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Approvals</p>
+            <h2>Pending actions</h2>
+          </div>
+        </div>
+        <div id="approvals-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Reminders</p>
+            <h2>Due now</h2>
+          </div>
+        </div>
+        <div id="reminders-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Workflows</p>
+            <h2>Supervisor and queue</h2>
+          </div>
+          <button id="run-supervisor" class="ghost-button" type="button">Run cycle</button>
+        </div>
+        <div id="workflows-panel" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Notes</p>
+            <h2>Recent workspace notes</h2>
+          </div>
+        </div>
+        <div id="notes-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Audit</p>
+            <h2>Recent flows</h2>
+          </div>
+        </div>
+        <div id="activity-list" class="stack-list"></div>
+      </section>
+
+      <section class="panel-card">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Sync</p>
+            <h2>Snapshot export</h2>
+          </div>
+        </div>
+        <div class="stack-form">
+          <label class="toggle-card" for="include-note-content">
+            <input id="include-note-content" type="checkbox">
+            <span>Include note text in export</span>
+            <span class="field-note">Leave this off for lighter, safer snapshots.</span>
+          </label>
+          <div class="action-row">
+            <button id="download-snapshot" class="primary-button" type="button">Download snapshot</button>
+          </div>
+          <p id="snapshot-status" class="field-note">Exports a local JSON snapshot for trusted manual sync or backup.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./mobile.js"></script>
+  </body>
+</html>

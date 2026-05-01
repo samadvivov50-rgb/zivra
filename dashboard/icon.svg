@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Zivra icon">
+  <defs>
+    <linearGradient id="zivraGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#c7683b"/>
+      <stop offset="100%" stop-color="#2f6057"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#f5efe2"/>
+  <path d="M54 70h148v20L94 186h108v20H54v-20l108-96H54z" fill="url(#zivraGradient)"/>
+</svg>

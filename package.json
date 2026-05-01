@@ -1,0 +1,13 @@
+{
+  "name": "zivra-smoke-suite",
+  "private": true,
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "test:smoke": "playwright test",
+    "test:smoke:headed": "playwright test --headed",
+    "test:smoke:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2"
+  }
+}

@@ -1,0 +1,13 @@
+.uv-cache/
+.venv/
+__pycache__/
+*.py[cod]
+backend/data/audit/actions.jsonl
+backend/data/launcher/
+backend/data/test-runs/
+backend/data/memory/conversations.sqlite3
+node_modules/
+dist/
+build/
+playwright-report/
+test-results/
