@@ -1,7 +1,9 @@
 .uv-cache/
+.codex/
 .venv/
 __pycache__/
 *.py[cod]
+backend/data/
 backend/data/audit/actions.jsonl
 backend/data/launcher/
 backend/data/test-runs/
